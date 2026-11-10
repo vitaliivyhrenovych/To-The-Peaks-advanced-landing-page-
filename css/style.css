@@ -1038,3 +1038,92 @@ h3 {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Swiper reviews */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #2f6b3e;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    width: 28px;
+    border-radius: 5px;
+    background: #2f6b3e;
+    opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 90%);
+    box-shadow: 0 4px 12px rgb(15 38 19 / 15%);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.65;
+    transition: opacity 0.4s ease;
+}
+
+.swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
+@media (max-width: 480px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
+
+.gallery-item {
+    aspect-ratio: 4 / 3;
+}
+
+.fancybox-fade-in {
+    animation: fancybox-fade-in 0.35s ease forwards;
+}
+
+.fancybox-fade-out {
+    animation: fancybox-fade-in 0.35s ease reverse forwards;
+}
+
+@keyframes fancybox-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.typed-cursor {
+    color: #dcebdc;
+    font-weight: 100;
+    opacity: 1;
+    animation: typed-blink 0.8s infinite;
+}
+
+@keyframes typed-blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}

@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
 </head>
 <body class="bg-[#F7F5EF] font-['Inter',system-ui,sans-serif] text-[#202A24] antialiased leading-[1.65]">
   <header class="sticky top-0 z-50 border-b border-[#D4D9D1] bg-[#F7F5EF]/95 backdrop-blur">
@@ -50,38 +51,37 @@
   </header>
 
   <main id="top">
-    <section aria-labelledby="hero-title" class="mx-auto grid max-w-[70rem] grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-12 lg:py-16">
-      <div class="relative z-10 lg:py-6">
-        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D4D9D1] bg-white/70 px-4 py-2 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">
-          <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#43634E]"></span>
-          Еко-мандрівки Карпатами
+    <!-- ====== Hero-секція ====== -->
+    <section
+      id="hero"
+      class="relative flex min-h-[70vh] items-center justify-center overflow-hidden"
+    >
+      <img
+        src="https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        alt="Туманна долина в Карпатах"
+        class="absolute inset-0 h-full w-full object-cover"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-forest-900/60 via-forest-900/40 to-forest-900/70"></div>
+      <div class="relative z-10 px-4 text-center sm:px-6">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-forest-100 sm:text-base">
+          Платформа еко-туризму
         </p>
-        <h1 id="hero-title" class="max-w-2xl font-['Raleway',sans-serif] text-[clamp(2.25rem,4vw,3.75rem)] font-semibold leading-[1.2] tracking-[-0.045em]">
-          Чесні еко-подорожі Карпатами без прихованих умов
+        <h1 class="text-4xl font-bold text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
+          До Вершин
         </h1>
-        <p class="mt-6 max-w-xl text-[1.08rem] leading-[1.65] text-[#606A63]">
-          Маршрут і локальний гід саме для вас — із прозорою ціною та підтримкою на кожному етапі подорожі.
+        <p class="mt-6 min-h-[2.5rem] text-xl font-medium text-white drop-shadow sm:text-2xl lg:text-3xl">
+          <span id="typed-text"></span>
         </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="#request" class="inline-flex min-h-12 items-center justify-center rounded border border-[#43634E] bg-[#43634E] px-[1.375rem] font-bold text-white transition duration-[160ms] ease-[ease] hover:border-[#304A39] hover:bg-[#304A39] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
-            Розрахувати тур <span aria-hidden="true" class="ml-2">↗</span>
-          </a>
-          <a href="#benefits" class="inline-flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white/70 px-[1.375rem] font-bold text-[#202A24] transition duration-[160ms] ease-[ease] hover:border-[#43634E] hover:bg-[#EEEAE0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
-            Чому ми
-          </a>
-        </div>
-        <ul aria-label="Досягнення платформи" class="mt-10 grid max-w-lg grid-cols-3 gap-3 border-t border-[#D4D9D1] pt-6 sm:gap-6">
-          <li><strong class="block font-['Raleway',sans-serif] text-[1.25rem] font-bold">25+</strong><span class="text-[0.78rem] leading-[1.65] text-[#606A63]">маршрутів</span></li>
-          <li><strong class="block font-['Raleway',sans-serif] text-[1.25rem] font-bold">18</strong><span class="text-[0.78rem] leading-[1.65] text-[#606A63]">локальних гідів</span></li>
-          <li><strong class="block font-['Raleway',sans-serif] text-[1.25rem] font-bold">4.9/5</strong><span class="text-[0.78rem] leading-[1.65] text-[#606A63]">оцінка гостей</span></li>
-        </ul>
-      </div>
-      <div class="hero-media">
-        <video autoplay muted loop playsinline aria-hidden="true" poster="assets/images/hero-image.jpg" class="aspect-[4/3] w-full rounded-xl object-cover shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] sm:aspect-[5/4]">
-          <source src="assets/video/hero_video.mp4" type="video/mp4">
-        </video>
+        <a
+          href="#gallery"
+          class="mt-8 inline-block rounded-full bg-forest-500 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-forest-600 hover:shadow-xl sm:text-lg"
+        >
+          Почати подорож
+        </a>
       </div>
     </section>
+    <!-- ====== /Hero-секція ====== -->
 
     <section class="video-section" aria-labelledby="video-title">
       <div class="video-container">
@@ -239,49 +239,50 @@
       </div>
     </section>
 
-    <section id="reviews" aria-labelledby="reviews-title" class="scroll-mt-24 mx-auto max-w-[70rem] px-4 py-16 sm:px-8 sm:py-14 lg:px-12 lg:py-[5.5rem]">
+    <section id="reviews" aria-labelledby="reviews-title" class="scroll-mt-24 bg-gradient-to-b from-forest-50 to-sand-100 py-16 sm:py-20 lg:py-24">
       <div class="mx-auto mb-[2.375rem] max-w-2xl text-center">
         <p class="mb-3 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">Відгуки</p>
-        <h2 id="reviews-title" class="font-['Raleway',sans-serif] text-[clamp(1.8rem,3.2vw,2.8rem)] font-semibold leading-[1.2] tracking-[-0.045em]">Відгуки мандрівників</h2>
-        <p class="mt-4 leading-[1.65] text-[#606A63]">Історії людей, які вже відкрили для себе Карпати.</p>
+        <h2 id="reviews-title" class="font-['Raleway',sans-serif] text-[clamp(1.8rem,3.2vw,2.8rem)] font-semibold leading-[1.2] tracking-[-0.045em]">Що кажуть наші мандрівники</h2>
+        <p class="mt-4 leading-[1.65] text-[#606A63]">Тисячі туристів вже відкрили для себе красу українських Карпат разом із нами.</p>
       </div>
-      <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+      <div class="swiper reviews-swiper !overflow-visible">
+      <ul class="swiper-wrapper pb-14">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Олена <span class="font-normal text-[#606A63]">· Львів</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Маршрут був добре продуманий, а краєвиди — неймовірні. Почувалися спокійно протягом усієї мандрівки».</blockquote>
             <a href="#request" class="mt-6 inline-flex min-h-11 items-center font-semibold text-[#43634E] underline decoration-[#D4D9D1] underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-[#304A39] focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Обговорити подорож <span aria-hidden="true" class="ml-2">→</span></a>
           </figure>
         </li>
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Андрій <span class="font-normal text-[#606A63]">· Київ</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Ми побачили гори з нового боку й познайомилися з гостинними місцевими людьми».</blockquote>
             <a href="#request" class="mt-6 inline-flex min-h-11 items-center font-semibold text-[#43634E] underline decoration-[#D4D9D1] underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-[#304A39] focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Обговорити подорож <span aria-hidden="true" class="ml-2">→</span></a>
           </figure>
         </li>
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Марія <span class="font-normal text-[#606A63]">· Одеса</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Було легко спланувати поїздку та зрозуміти, що саме потрібно взяти із собою».</blockquote>
             <a href="#request" class="mt-6 inline-flex min-h-11 items-center font-semibold text-[#43634E] underline decoration-[#D4D9D1] underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-[#304A39] focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Обговорити подорож <span aria-hidden="true" class="ml-2">→</span></a>
           </figure>
         </li>
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Ірина <span class="font-normal text-[#606A63]">· Дніпро</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Гід уважно врахував наш темп і допоміг відчути себе впевнено на маршруті».</blockquote>
             <a href="#request" class="mt-6 inline-flex min-h-11 items-center font-semibold text-[#43634E] underline decoration-[#D4D9D1] underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-[#304A39] focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Обговорити подорож <span aria-hidden="true" class="ml-2">→</span></a>
           </figure>
         </li>
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Тарас <span class="font-normal text-[#606A63]">· Тернопіль</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Сподобалося, що маршрут і витрати були зрозумілі ще до початку подорожі».</blockquote>
             <a href="#request" class="mt-6 inline-flex min-h-11 items-center font-semibold text-[#43634E] underline decoration-[#D4D9D1] underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-[#304A39] focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Обговорити подорож <span aria-hidden="true" class="ml-2">→</span></a>
           </figure>
         </li>
-        <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
+        <li class="swiper-slide rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
           <figure class="flex h-full flex-col">
             <figcaption class="mb-4 font-semibold">Наталія <span class="font-normal text-[#606A63]">· Харків</span></figcaption>
             <blockquote class="flex-1 font-['Raleway',sans-serif] text-[1.05rem] font-medium leading-[1.65]">«Це була чудова сімейна пригода — ми побачили гори й відпочили на природі».</blockquote>
@@ -289,6 +290,31 @@
           </figure>
         </li>
       </ul>
+      <div class="swiper-pagination !bottom-0" aria-label="Пагінація відгуків"></div>
+      <div class="swiper-button-prev !text-forest-600 after:!text-xl" aria-label="Попередній відгук"></div>
+      <div class="swiper-button-next !text-forest-600 after:!text-xl" aria-label="Наступний відгук"></div>
+      </div>
+    </section>
+
+    <section id="gallery" aria-label="Галерея ландшафтів Карпат" class="bg-stone-50 py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center sm:mb-14">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-forest-600">Галерея</p>
+          <h2 class="text-3xl font-bold text-forest-900 sm:text-4xl lg:text-5xl">Краса Карпат</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base text-stone-600 sm:text-lg">Наймальовничіші куточки українських гір. Натисніть на фото, щоб переглянути його у повному розмірі.</p>
+        </div>
+        <div class="gallery-grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="https://images.pexels.com/photos/26146516/pexels-photo-26146516.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Карпати під драматичним небом — масив Говерла" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://images.pexels.com/photos/26146516/pexels-photo-26146516.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Карпати під драматичним небом" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+          </a>
+          <a href="https://images.pexels.com/photos/14815707/pexels-photo-14815707.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Зелені простори Карпат — полонини Свидовця" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://images.pexels.com/photos/14815707/pexels-photo-14815707.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Зелені простори Карпат" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+          </a>
+          <a href="https://images.pexels.com/photos/16705646/pexels-photo-16705646.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Осінні Карпати — хвойні ліси та еко-домик" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
+            <img src="https://images.pexels.com/photos/16705646/pexels-photo-16705646.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Осінні Карпати з хвойними лісами" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+          </a>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="about-title" class="border-y border-[#D4D9D1] bg-[#EEEAE0]">
@@ -462,5 +488,109 @@
     });
   </script>
   <script src="assets/js/validation.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: "#f0f7f0",
+              100: "#dcebdc",
+              500: "#2f6b3e",
+              600: "#265631",
+              700: "#1d4226",
+              900: "#0f2613",
+            },
+            sand: {
+              100: "#f5efe1",
+              200: "#ece0c4",
+            },
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    const typed = new Typed("#typed-text", {
+      strings: [
+        "Найкращі еко-тури у Карпатах.",
+        "Свіже гірське повітря щодня.",
+        "Затишок дикої природи.",
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+    });
+
+    Fancybox.bind('[data-fancybox="mountains-gallery"]', {
+      animated: true,
+      showClass: "fancybox-fade-in",
+      hideClass: "fancybox-fade-out",
+      transitionEffect: "fade",
+      Hash: false,
+      Thumbs: {
+        showOnStart: false,
+      },
+      Toolbar: {
+        display: {
+          left: ["infobar"],
+          middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW"],
+          right: ["slideshow", "fullscreen", "thumbs", "close"],
+        },
+      },
+      Image: {
+        zoom: true,
+        click: "toggleZoom",
+        wheel: "zoom",
+        Panzoom: {
+          maxScale: 4,
+        },
+      },
+      carousel: {
+        transition: "fade",
+      },
+    });
+
+    const reviewsSwiper = new Swiper(".reviews-swiper", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 32,
+      grabCursor: true,
+      speed: 600,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
+    });
+  </script>
 </body>
 </html>
