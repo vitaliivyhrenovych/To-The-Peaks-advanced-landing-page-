@@ -5,6 +5,7 @@
   const totalOutput =
     document.getElementById('total-price') ||
     document.getElementById('tour-summary-total-value');
+  const priceFormatter = new Intl.NumberFormat('uk-UA');
 
   const choices = {
     duration: {
@@ -122,7 +123,7 @@
   }
 
   function formatPrice(amount) {
-    return `${new Intl.NumberFormat('uk-UA').format(amount)} грн`;
+    return `${priceFormatter.format(amount)} грн`;
   }
 
   function clearValidationErrors() {
@@ -183,7 +184,7 @@
       }
     }
 
-    priceOutput.textContent = 'Перевірте параметри';
+    totalOutput.textContent = 'Перевірте параметри';
     priceOutputIds.forEach((id) => setText(id, '—'));
   }
 
@@ -233,6 +234,5 @@
 
   const eventTarget = form || document;
   eventTarget.addEventListener('change', updatePrice);
-  eventTarget.addEventListener('input', updatePrice);
   updatePrice();
 })();

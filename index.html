@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
 </head>
 <body class="bg-[#F7F5EF] font-['Inter',system-ui,sans-serif] text-[#202A24] antialiased leading-[1.65]">
+  <a class="skip-link" href="#top">Перейти до основного вмісту</a>
   <header class="sticky top-0 z-50 border-b border-[#D4D9D1] bg-[#F7F5EF]/95 backdrop-blur">
     <div class="mx-auto flex max-w-[70rem] flex-wrap items-center justify-between gap-x-8 px-4 py-2 sm:px-8 lg:grid lg:grid-cols-3 lg:px-12">
       <a href="#top" class="inline-flex min-h-11 w-fit items-center rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#43634E] lg:col-start-1 lg:row-start-1" aria-label="До Вершин — на головну">
@@ -50,7 +51,7 @@
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <!-- ====== Hero-секція ====== -->
     <section
       id="hero"
@@ -58,7 +59,14 @@
     >
       <img
         src="https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        srcset="https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w,
+                https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960 960w,
+                https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280 1280w,
+                https://images.pexels.com/photos/13444102/pexels-photo-13444102.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w"
+        sizes="100vw"
         alt="Туманна долина в Карпатах"
+        width="1920"
+        height="1080"
         class="absolute inset-0 h-full w-full object-cover"
         fetchpriority="high"
       />
@@ -68,14 +76,14 @@
           Платформа еко-туризму
         </p>
         <h1 class="text-4xl font-bold text-white drop-shadow-lg sm:text-5xl lg:text-6xl">
-          До Вершин
+          Еко-мандрівки Карпатами
         </h1>
         <p class="mt-6 min-h-[2.5rem] text-xl font-medium text-white drop-shadow sm:text-2xl lg:text-3xl">
           <span id="typed-text"></span>
         </p>
         <a
-          href="#gallery"
-          class="mt-8 inline-block rounded-full bg-forest-500 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-forest-600 hover:shadow-xl sm:text-lg"
+          href="#request"
+          class="mt-8 inline-block rounded-full bg-forest-500 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-forest-600 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white focus-visible:ring-2 focus-visible:ring-[#202A24] sm:text-lg"
         >
           Розрахувати тур
         </a>
@@ -114,17 +122,17 @@
         </div>
         <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-            <img src="assets/icons/icon%201.svg" alt="" aria-hidden="true" class="advantages-icon">
+            <img src="assets/icons/icon%201.svg" alt="" width="904" height="904" loading="lazy" class="advantages-icon">
             <h3 class="font-['Raleway',sans-serif] text-[1.25rem] font-semibold leading-[1.2]">Локальні перевірені гіди</h3>
             <p class="mt-2 leading-[1.65] text-[#606A63]">Наші гіди мають багато досвіду в різноманітних видах туризму, зокрема в Карпатах</p>
           </li>
           <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-            <img src="assets/icons/icon%202.svg" alt="" aria-hidden="true" class="advantages-icon">
+            <img src="assets/icons/icon%202.svg" alt="" width="1024" height="1024" loading="lazy" class="advantages-icon">
             <h3 class="font-['Raleway',sans-serif] text-[1.25rem] font-semibold leading-[1.2]">Прозорий розрахунок ціни</h3>
             <p class="mt-2 leading-[1.65] text-[#606A63]">Будьте впевнені в прозорості цін використовуючи наш інтерактивний калькулятор цін</p>
           </li>
           <li class="rounded-lg border border-[#D4D9D1] bg-white p-[1.625rem] shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-            <img src="assets/icons/icon%203.svg" alt="" aria-hidden="true" class="advantages-icon">
+            <img src="assets/icons/icon%203.svg" alt="" width="1024" height="1024" loading="lazy" class="advantages-icon">
             <h3 class="font-['Raleway',sans-serif] text-[1.25rem] font-semibold leading-[1.2]">Безпека та зв’язок</h3>
             <p class="mt-2 leading-[1.65] text-[#606A63]">Наш сайт має високі стандарти безпеки для клієнтів, а саме в них входить доступ до постійного зв’язку Starlink/Gps</p>
           </li>
@@ -168,7 +176,7 @@
         <ul class="grid grid-cols-1 gap-5 md:grid-cols-3">
           <li class="flex">
             <article aria-labelledby="gear-card-1" class="flex w-full flex-col overflow-hidden rounded-lg border border-[#D4D9D1] bg-white shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-              <img src="assets/images/hero-image.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="640" height="480" loading="lazy" class="aspect-[16/10] w-full object-cover">
+              <img src="assets/images/hero-image-optimized.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="1280" height="731" loading="lazy" class="aspect-[16/10] w-full object-cover">
               <div class="flex flex-1 flex-col p-[1.625rem]">
                 <div>
                   <p class="mb-3 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">Підбір спорядження</p>
@@ -186,7 +194,7 @@
           </li>
           <li class="flex">
             <article aria-labelledby="gear-card-2" class="flex w-full flex-col overflow-hidden rounded-lg border border-[#D4D9D1] bg-white shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-              <img src="assets/images/hero-image.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="640" height="480" loading="lazy" class="aspect-[16/10] w-full object-cover">
+              <img src="assets/images/hero-image-optimized.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="1280" height="731" loading="lazy" class="aspect-[16/10] w-full object-cover">
               <div class="flex flex-1 flex-col p-[1.625rem]">
                 <div>
                   <p class="mb-3 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">Одяг</p>
@@ -204,7 +212,7 @@
           </li>
           <li class="flex">
             <article aria-labelledby="gear-card-3" class="flex w-full flex-col overflow-hidden rounded-lg border border-[#D4D9D1] bg-white shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)] transition duration-[240ms] ease-[ease] hover:-translate-y-[2px] hover:shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)]">
-              <img src="assets/images/hero-image.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="640" height="480" loading="lazy" class="aspect-[16/10] w-full object-cover">
+              <img src="assets/images/hero-image-optimized.jpg" alt="Мандрівник із рюкзаком у Карпатах" width="1280" height="731" loading="lazy" class="aspect-[16/10] w-full object-cover">
               <div class="flex flex-1 flex-col p-[1.625rem]">
                 <div>
                   <p class="mb-3 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">Взуття</p>
@@ -291,8 +299,8 @@
         </li>
       </ul>
       <div class="swiper-pagination !bottom-0" aria-label="Пагінація відгуків"></div>
-      <div class="swiper-button-prev !text-forest-600 after:!text-xl" aria-label="Попередній відгук"></div>
-      <div class="swiper-button-next !text-forest-600 after:!text-xl" aria-label="Наступний відгук"></div>
+      <button type="button" class="swiper-button-prev border-0 bg-transparent p-0 !text-forest-600 after:!text-xl" aria-label="Попередній відгук"></button>
+      <button type="button" class="swiper-button-next border-0 bg-transparent p-0 !text-forest-600 after:!text-xl" aria-label="Наступний відгук"></button>
       </div>
     </section>
 
@@ -305,13 +313,13 @@
         </div>
         <div class="gallery-grid grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="https://images.pexels.com/photos/26146516/pexels-photo-26146516.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Карпати під драматичним небом — масив Говерла" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
-            <img src="https://images.pexels.com/photos/26146516/pexels-photo-26146516.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Карпати під драматичним небом" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+            <img src="https://images.pexels.com/photos/26146516/pexels-photo-26146516.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Карпати під драматичним небом" width="800" height="600" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
           </a>
           <a href="https://images.pexels.com/photos/14815707/pexels-photo-14815707.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Зелені простори Карпат — полонини Свидовця" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
-            <img src="https://images.pexels.com/photos/14815707/pexels-photo-14815707.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Зелені простори Карпат" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+            <img src="https://images.pexels.com/photos/14815707/pexels-photo-14815707.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Зелені простори Карпат" width="800" height="600" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
           </a>
           <a href="https://images.pexels.com/photos/16705646/pexels-photo-16705646.jpeg?auto=compress&cs=tinysrgb&w=1600" data-fancybox="mountains-gallery" data-caption="Осінні Карпати — хвойні ліси та еко-домик" class="gallery-item group relative block overflow-hidden rounded-2xl shadow-lg">
-            <img src="https://images.pexels.com/photos/16705646/pexels-photo-16705646.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Осінні Карпати з хвойними лісами" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
+            <img src="https://images.pexels.com/photos/16705646/pexels-photo-16705646.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Осінні Карпати з хвойними лісами" width="800" height="600" class="h-72 w-full object-cover transition duration-500 ease-out group-hover:scale-110" loading="lazy">
           </a>
         </div>
       </div>
@@ -319,19 +327,19 @@
 
     <section aria-labelledby="about-title" class="border-y border-[#D4D9D1] bg-[#EEEAE0]">
       <div class="mx-auto grid max-w-[70rem] grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-[5.5rem]">
-        <img src="assets/images/aboutus_picture.png" alt="Команда «До Вершин» серед карпатських гір" width="600" height="800" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-cover shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)]">
+        <img src="assets/images/aboutus_picture-optimized.jpg" alt="Замок серед лісу" width="600" height="640" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-cover shadow-[0_0.25rem_1rem_rgb(32_42_36_/_6%)]">
         <div>
           <p class="mb-3 text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#43634E]">Про нас</p>
           <h2 id="about-title" class="font-['Raleway',sans-serif] text-[clamp(1.8rem,3.2vw,2.8rem)] font-semibold leading-[1.2] tracking-[-0.045em]">Ми будуємо міст між мандрівником і горами</h2>
           <p class="mt-5 leading-[1.65] text-[#606A63]">«До Вершин» допомагає спланувати подорож так, щоб знайомство з горами було безпечним і дбайливим.</p>
           <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
             <section aria-labelledby="mission-title">
-              <img src="assets/icons/holiday_village.png" alt="" aria-hidden="true" loading="lazy" class="mb-4 h-10 w-auto object-contain">
+              <img src="assets/icons/holiday_village.png" alt="" width="48" height="48" loading="lazy" class="mb-4 h-10 w-auto object-contain">
               <h3 id="mission-title" class="font-['Raleway',sans-serif] text-[1.25rem] font-semibold leading-[1.2]">Наша місія</h3>
               <p class="mt-2 text-[0.9rem] leading-[1.65] text-[#606A63]">Розвивати відповідальний еко-туризм, який підтримує природу та місцевих мешканців.</p>
             </section>
             <section aria-labelledby="approach-title">
-              <img src="assets/icons/route.png" alt="" aria-hidden="true" loading="lazy" class="mb-4 h-10 w-auto object-contain">
+              <img src="assets/icons/route.png" alt="" width="48" height="48" loading="lazy" class="mb-4 h-10 w-auto object-contain">
               <h3 id="approach-title" class="font-['Raleway',sans-serif] text-[1.25rem] font-semibold leading-[1.2]">Наш підхід</h3>
               <p class="mt-2 text-[0.9rem] leading-[1.65] text-[#606A63]">Ми працюємо напряму з громадами, без посередників, і перевіряємо кожен маршрут особисто.</p>
             </section>
@@ -397,7 +405,7 @@
           <aside id="tour-summary" aria-labelledby="tour-summary-title" class="rounded-lg border border-[#D4D9D1] bg-white p-4 sm:p-5 lg:sticky lg:top-24">
             <h3 id="tour-summary-title" class="font-['Raleway',sans-serif] text-xl font-semibold">Ваш тур</h3>
             <p id="tour-summary-note" class="mb-4 mt-1 text-sm text-[#606A63]">Попередній розрахунок. Ціни уточнюються під час підтвердження заявки.</p>
-            <dl id="tour-summary-prices" aria-live="polite" class="space-y-2 text-sm">
+            <dl id="tour-summary-prices" class="space-y-2 text-sm">
               <div id="tour-summary-duration-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-duration-label" class="text-[#606A63]">Тривалість</dt><dd id="tour-summary-duration-value" class="text-right font-medium">1 день</dd></div>
               <div id="tour-summary-guides-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-guides-label" class="text-[#606A63]">Гіди</dt><dd id="tour-summary-guides-value" class="text-right font-medium">Без гіда</dd></div>
               <div id="tour-summary-equipment-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-equipment-label" class="text-[#606A63]">Спорядження</dt><dd id="tour-summary-equipment-value" class="text-right font-medium">Без спорядження</dd></div>
@@ -406,7 +414,7 @@
               <div id="tour-summary-guides-price-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-guides-price-label" class="text-[#606A63]">Вартість гідів</dt><dd id="tour-summary-guides-price-value" class="text-right font-medium">Уточнюється, грн</dd></div>
               <div id="tour-summary-equipment-price-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-equipment-price-label" class="text-[#606A63]">Вартість спорядження</dt><dd id="tour-summary-equipment-price-value" class="text-right font-medium">Уточнюється, грн</dd></div>
               <div id="tour-summary-transfer-price-row" class="flex items-start justify-between gap-4"><dt id="tour-summary-transfer-price-label" class="text-[#606A63]">Вартість трансферу</dt><dd id="tour-summary-transfer-price-value" class="text-right font-medium">Уточнюється, грн</dd></div>
-              <div id="tour-summary-total-row" class="flex items-center justify-between gap-4 border-t border-[#D4D9D1] pt-3 text-base font-bold"><dt id="tour-summary-total-label">Разом</dt><dd id="tour-summary-total-value" class="text-right text-[#43634E]">Уточнюється, грн</dd></div>
+              <div id="tour-summary-total-row" class="flex items-center justify-between gap-4 border-t border-[#D4D9D1] pt-3 text-base font-bold"><dt id="tour-summary-total-label">Разом</dt><dd id="tour-summary-total-value" aria-live="polite" aria-atomic="true" class="text-right text-[#43634E]">Уточнюється, грн</dd></div>
             </dl>
             <p id="tour-summary-error" class="mt-3 hidden text-sm font-medium text-red-700" role="alert"></p>
             <div id="tour-summary-actions" class="mt-5 grid gap-2">
@@ -455,19 +463,19 @@
           <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label for="username" class="mb-2 block text-[0.9rem] font-semibold">Ім'я</label>
-              <input id="username" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required placeholder="Як до вас звертатися?" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <input id="username" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required placeholder="Як до вас звертатися?" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
             </div>
             <div>
               <label for="phone" class="mb-2 block text-[0.9rem] font-semibold">Телефон</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+380" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+380" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
             </div>
             <div class="sm:col-span-2">
               <label for="email" class="mb-2 block text-[0.9rem] font-semibold">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
             </div>
             <div>
               <label for="destination" class="mb-2 block text-[0.9rem] font-semibold">Напрямок</label>
-              <select id="destination" name="destination" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <select id="destination" name="destination" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
                 <option value="">Ще не визначився / -лася</option>
                 <option>Свидовець</option>
                 <option>Чорногора</option>
@@ -478,7 +486,7 @@
             </div>
             <div>
               <label for="people" class="mb-2 block text-[0.9rem] font-semibold">Кількість людей</label>
-              <select id="people" name="people" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <select id="people" name="people" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
                 <option>1 людина</option>
                 <option selected>2 людини</option>
                 <option>3–5 людей</option>
@@ -487,11 +495,11 @@
             </div>
             <div class="sm:col-span-2">
               <label for="dates" class="mb-2 block text-[0.9rem] font-semibold">Бажані дати</label>
-              <input id="dates" name="dates" type="text" placeholder="Наприклад, друга половина червня" class="min-h-12 w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
+              <input id="dates" name="dates" type="text" placeholder="Наприклад, друга половина червня" class="control-border min-h-12 w-full rounded border bg-white px-[1.375rem] text-[#202A24] placeholder:text-[#606A63] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="mb-2 block text-[0.9rem] font-semibold">Повідомлення</label>
-              <textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required class="w-full rounded border border-[#D4D9D1] bg-white px-[1.375rem] py-3 text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]"></textarea>
+              <textarea id="message" name="message" rows="4" minlength="10" maxlength="2000" required class="control-border w-full rounded border bg-white px-[1.375rem] py-3 text-[#202A24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]"></textarea>
             </div>
             <div class="sm:col-span-2">
               <div class="flex items-start gap-3">
@@ -564,23 +572,6 @@
       }
     });
 
-    const tourBuilderForm = document.getElementById('tour-builder-form');
-
-    if (tourBuilderForm) {
-      tourBuilderForm.addEventListener('change', (event) => {
-        const selectedOption = event.target;
-
-        if (!(selectedOption instanceof HTMLInputElement) || !selectedOption.checked) {
-          return;
-        }
-
-        const summaryValue = document.getElementById(selectedOption.dataset.summaryTarget);
-
-        if (summaryValue) {
-          summaryValue.textContent = selectedOption.dataset.summaryValue;
-        }
-      });
-    }
   </script>
   <script src="assets/js/validation.js" defer></script>
   <script src="assets/js/widget.js" defer></script>
@@ -610,83 +601,105 @@
       },
     };
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js" defer></script>
   <script>
-    const typed = new Typed("#typed-text", {
-      strings: [
-        "Найкращі еко-тури у Карпатах.",
-        "Свіже гірське повітря щодня.",
-        "Затишок дикої природи.",
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true,
-    });
+    function initializePageWidgets() {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
-    Fancybox.bind('[data-fancybox="mountains-gallery"]', {
-      animated: true,
-      showClass: "fancybox-fade-in",
-      hideClass: "fancybox-fade-out",
-      transitionEffect: "fade",
-      Hash: false,
-      Thumbs: {
-        showOnStart: false,
-      },
-      Toolbar: {
-        display: {
-          left: ["infobar"],
-          middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW"],
-          right: ["slideshow", "fullscreen", "thumbs", "close"],
-        },
-      },
-      Image: {
-        zoom: true,
-        click: "toggleZoom",
-        wheel: "zoom",
-        Panzoom: {
-          maxScale: 4,
-        },
-      },
-      carousel: {
-        transition: "fade",
-      },
-    });
+      if (prefersReducedMotion) {
+        document.getElementById("typed-text").textContent =
+          "Найкращі еко-тури у Карпатах.";
+      } else {
+        new Typed("#typed-text", {
+          strings: [
+            "Найкращі еко-тури у Карпатах.",
+            "Свіже гірське повітря щодня.",
+            "Затишок дикої природи.",
+          ],
+          typeSpeed: 50,
+          backSpeed: 30,
+          loop: true,
+        });
+      }
 
-    const reviewsSwiper = new Swiper(".reviews-swiper", {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 32,
-      grabCursor: true,
-      speed: 600,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      keyboard: {
-        enabled: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 32,
+      Fancybox.bind('[data-fancybox="mountains-gallery"]', {
+        animated: true,
+        showClass: "fancybox-fade-in",
+        hideClass: "fancybox-fade-out",
+        transitionEffect: "fade",
+        Hash: false,
+        Thumbs: {
+          showOnStart: false,
         },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 40,
+        Toolbar: {
+          display: {
+            left: ["infobar"],
+            middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW"],
+            right: ["slideshow", "fullscreen", "thumbs", "close"],
+          },
         },
-      },
-    });
+        Image: {
+          zoom: true,
+          click: "toggleZoom",
+          wheel: "zoom",
+          Panzoom: {
+            maxScale: 4,
+          },
+        },
+        carousel: {
+          transition: "fade",
+        },
+      });
+
+      new Swiper(".reviews-swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        grabCursor: true,
+        speed: 600,
+        autoplay: prefersReducedMotion ? false : {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        a11y: {
+          nextSlideMessage: "Наступний відгук",
+          prevSlideMessage: "Попередній відгук",
+          paginationBulletMessage: "Перейти до відгуку {{index}}",
+        },
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializePageWidgets, { once: true });
+    } else {
+      initializePageWidgets();
+    }
   </script>
 </body>
 </html>
