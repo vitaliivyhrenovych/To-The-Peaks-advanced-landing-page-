@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="css/tailwind.generated.css">
 </head>
 <body class="bg-[#F7F5EF] font-['Inter',system-ui,sans-serif] text-[#202A24] antialiased leading-[1.65]">
   <a class="skip-link" href="#top">Перейти до основного вмісту</a>
@@ -69,7 +70,7 @@
         height="1080"
         class="absolute inset-0 h-full w-full object-cover"
         fetchpriority="high"
-      />
+      >
       <div class="absolute inset-0 bg-gradient-to-b from-forest-900/60 via-forest-900/40 to-forest-900/70"></div>
       <div class="relative z-10 px-4 text-center sm:px-6">
         <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-forest-100 sm:text-base">
@@ -96,14 +97,31 @@
         <h2 id="video-title">Відчуйте Карпати до мандрівки</h2>
         <div class="video-layout">
           <figure class="video-frame">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/i_floFq4Ekk?rel=0"
-              title="Відео про Карпати від «До Вершин»"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <a
+              class="video-placeholder"
+              href="https://www.youtube.com/watch?v=i_floFq4Ekk"
+              data-embed-src="https://www.youtube-nocookie.com/embed/i_floFq4Ekk?rel=0"
+              data-embed-title="Відео про Карпати від «До Вершин»"
+              data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              data-embed-referrerpolicy="strict-origin-when-cross-origin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Відтворити відео про Карпати від «До Вершин»"
+            >
+              <img
+                src="https://i.ytimg.com/vi/i_floFq4Ekk/hqdefault.jpg"
+                alt=""
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="video-placeholder__play" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </span>
+            </a>
           </figure>
           <aside class="hero-weather-card" aria-label="Поточна погода в Карпатах">
             <a class="weatherwidget-io" href="https://forecast7.com/en/48d0524d21/rakhiv/" data-label_1="РАХІВ" data-label_2="ПОГОДА" data-theme="pure" data-language="uk" data-unit="c">Погода в Рахові</a>
@@ -236,13 +254,19 @@
       <div class="map-container">
         <h2 id="map-title">Знайдіть свої Карпати</h2>
         <figure class="map-frame">
-          <iframe
-            src="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine&output=embed"
-            title="Інтерактивна карта Карпат, Україна"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
+          <a
+            class="map-placeholder"
+            href="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine"
+            data-embed-src="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine&amp;output=embed"
+            data-embed-title="Інтерактивна карта Карпат, Україна"
+            data-embed-referrerpolicy="no-referrer-when-downgrade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Завантажити інтерактивну карту Карпат"
+          >
+            <span>Інтерактивна карта Карпат</span>
+            <span class="map-placeholder__action">Натисніть, щоб завантажити</span>
+          </a>
         </figure>
       </div>
     </section>
@@ -298,7 +322,7 @@
           </figure>
         </li>
       </ul>
-      <div class="swiper-pagination !bottom-0" aria-label="Пагінація відгуків"></div>
+      <div class="swiper-pagination !bottom-0" role="group" aria-label="Пагінація відгуків"></div>
       <button type="button" class="swiper-button-prev border-0 bg-transparent p-0 !text-forest-600 after:!text-xl" aria-label="Попередній відгук"></button>
       <button type="button" class="swiper-button-next border-0 bg-transparent p-0 !text-forest-600 after:!text-xl" aria-label="Наступний відгук"></button>
       </div>
@@ -357,16 +381,16 @@
           <p id="tour-builder-description" class="mx-auto mt-4 max-w-2xl text-[#606A63]">Оберіть тривалість і додаткові послуги — підсумок оновиться автоматично.</p>
         </div>
 
-        <form id="tour-builder-form" action="#request" class="grid grid-cols-1 gap-6 rounded-lg bg-[#F7F5EF] p-5 shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)] sm:p-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)] lg:items-start">
+        <div id="tour-builder-form" class="grid grid-cols-1 gap-6 rounded-lg bg-[#F7F5EF] p-5 shadow-[0_0.5rem_1.5rem_rgb(32_42_36_/_12%)] sm:p-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)] lg:items-start">
           <div id="tour-builder-options" class="space-y-6">
             <fieldset id="tour-duration-group" aria-describedby="tour-duration-error" class="min-w-0 rounded border border-transparent p-2 transition aria-[invalid=true]:border-red-700 aria-[invalid=true]:bg-red-50">
               <legend id="tour-duration-legend" class="mb-2 text-[0.9rem] font-semibold">1. Тривалість</legend>
               <div id="tour-duration-options" class="grid grid-cols-2 gap-2 rounded-md py-2 transition focus-within:ring-2 focus-within:ring-[#43634E] focus-within:ring-offset-2 sm:grid-cols-5">
-                <label id="tour-duration-label-1" for="tour-duration-1" class="cursor-pointer"><input id="tour-duration-1" class="peer sr-only" type="radio" name="tour-duration" value="1" data-summary-target="tour-summary-duration-value" data-summary-value="1 день" checked><span id="tour-duration-choice-1" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">1 день</span></label>
-                <label id="tour-duration-label-2" for="tour-duration-2" class="cursor-pointer"><input id="tour-duration-2" class="peer sr-only" type="radio" name="tour-duration" value="2" data-summary-target="tour-summary-duration-value" data-summary-value="2 дні"><span id="tour-duration-choice-2" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">2 дні</span></label>
-                <label id="tour-duration-label-3" for="tour-duration-3" class="cursor-pointer"><input id="tour-duration-3" class="peer sr-only" type="radio" name="tour-duration" value="3" data-summary-target="tour-summary-duration-value" data-summary-value="3 дні"><span id="tour-duration-choice-3" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">3 дні</span></label>
-                <label id="tour-duration-label-5" for="tour-duration-5" class="cursor-pointer"><input id="tour-duration-5" class="peer sr-only" type="radio" name="tour-duration" value="5" data-summary-target="tour-summary-duration-value" data-summary-value="5 днів"><span id="tour-duration-choice-5" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">5 днів</span></label>
-                <label id="tour-duration-label-7" for="tour-duration-7" class="cursor-pointer"><input id="tour-duration-7" class="peer sr-only" type="radio" name="tour-duration" value="7" data-summary-target="tour-summary-duration-value" data-summary-value="7 днів"><span id="tour-duration-choice-7" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">7 днів</span></label>
+                <label id="tour-duration-label-1" class="cursor-pointer"><input id="tour-duration-1" class="peer sr-only" type="radio" name="tour-duration" value="1" data-summary-target="tour-summary-duration-value" data-summary-value="1 день" checked><span id="tour-duration-choice-1" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">1 день</span></label>
+                <label id="tour-duration-label-2" class="cursor-pointer"><input id="tour-duration-2" class="peer sr-only" type="radio" name="tour-duration" value="2" data-summary-target="tour-summary-duration-value" data-summary-value="2 дні"><span id="tour-duration-choice-2" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">2 дні</span></label>
+                <label id="tour-duration-label-3" class="cursor-pointer"><input id="tour-duration-3" class="peer sr-only" type="radio" name="tour-duration" value="3" data-summary-target="tour-summary-duration-value" data-summary-value="3 дні"><span id="tour-duration-choice-3" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">3 дні</span></label>
+                <label id="tour-duration-label-5" class="cursor-pointer"><input id="tour-duration-5" class="peer sr-only" type="radio" name="tour-duration" value="5" data-summary-target="tour-summary-duration-value" data-summary-value="5 днів"><span id="tour-duration-choice-5" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">5 днів</span></label>
+                <label id="tour-duration-label-7" class="cursor-pointer"><input id="tour-duration-7" class="peer sr-only" type="radio" name="tour-duration" value="7" data-summary-target="tour-summary-duration-value" data-summary-value="7 днів"><span id="tour-duration-choice-7" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">7 днів</span></label>
               </div>
               <p id="tour-duration-error" class="mt-2 hidden text-sm font-medium text-red-700" role="alert"></p>
             </fieldset>
@@ -374,9 +398,9 @@
             <fieldset id="tour-guides-group" aria-describedby="tour-guides-error" class="min-w-0 rounded border border-transparent p-2 transition aria-[invalid=true]:border-red-700 aria-[invalid=true]:bg-red-50">
               <legend id="tour-guides-legend" class="mb-2 text-[0.9rem] font-semibold">2. Гіди</legend>
               <div id="tour-guides-options" class="grid grid-cols-1 gap-2 rounded-md py-2 transition focus-within:ring-2 focus-within:ring-[#43634E] focus-within:ring-offset-2 sm:grid-cols-3">
-                <label id="tour-guides-label-none" for="tour-guides-none" class="cursor-pointer"><input id="tour-guides-none" class="peer sr-only" type="radio" name="tour-guides" value="0" data-summary-target="tour-summary-guides-value" data-summary-value="Без гіда" checked><span id="tour-guides-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без гіда</span></label>
-                <label id="tour-guides-label-one" for="tour-guides-one" class="cursor-pointer"><input id="tour-guides-one" class="peer sr-only" type="radio" name="tour-guides" value="1" data-summary-target="tour-summary-guides-value" data-summary-value="1 гід"><span id="tour-guides-choice-one" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">1 гід</span></label>
-                <label id="tour-guides-label-two" for="tour-guides-two" class="cursor-pointer"><input id="tour-guides-two" class="peer sr-only" type="radio" name="tour-guides" value="2" data-summary-target="tour-summary-guides-value" data-summary-value="2 гіди"><span id="tour-guides-choice-two" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">2 гіди</span></label>
+                <label id="tour-guides-label-none" class="cursor-pointer"><input id="tour-guides-none" class="peer sr-only" type="radio" name="tour-guides" value="0" data-summary-target="tour-summary-guides-value" data-summary-value="Без гіда" checked><span id="tour-guides-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без гіда</span></label>
+                <label id="tour-guides-label-one" class="cursor-pointer"><input id="tour-guides-one" class="peer sr-only" type="radio" name="tour-guides" value="1" data-summary-target="tour-summary-guides-value" data-summary-value="1 гід"><span id="tour-guides-choice-one" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">1 гід</span></label>
+                <label id="tour-guides-label-two" class="cursor-pointer"><input id="tour-guides-two" class="peer sr-only" type="radio" name="tour-guides" value="2" data-summary-target="tour-summary-guides-value" data-summary-value="2 гіди"><span id="tour-guides-choice-two" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">2 гіди</span></label>
               </div>
               <p id="tour-guides-error" class="mt-2 hidden text-sm font-medium text-red-700" role="alert"></p>
             </fieldset>
@@ -384,9 +408,9 @@
             <fieldset id="tour-equipment-group" aria-describedby="tour-equipment-error" class="min-w-0 rounded border border-transparent p-2 transition aria-[invalid=true]:border-red-700 aria-[invalid=true]:bg-red-50">
               <legend id="tour-equipment-legend" class="mb-2 text-[0.9rem] font-semibold">3. Спорядження</legend>
               <div id="tour-equipment-options" class="grid grid-cols-1 gap-2 rounded-md py-2 transition focus-within:ring-2 focus-within:ring-[#43634E] focus-within:ring-offset-2 sm:grid-cols-3">
-                <label id="tour-equipment-label-none" for="tour-equipment-none" class="cursor-pointer"><input id="tour-equipment-none" class="peer sr-only" type="radio" name="tour-equipment" value="none" data-summary-target="tour-summary-equipment-value" data-summary-value="Без спорядження" checked><span id="tour-equipment-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без спорядження</span></label>
-                <label id="tour-equipment-label-basic" for="tour-equipment-basic" class="cursor-pointer"><input id="tour-equipment-basic" class="peer sr-only" type="radio" name="tour-equipment" value="basic" data-summary-target="tour-summary-equipment-value" data-summary-value="Базовий комплект"><span id="tour-equipment-choice-basic" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Базовий комплект</span></label>
-                <label id="tour-equipment-label-extended" for="tour-equipment-extended" class="cursor-pointer"><input id="tour-equipment-extended" class="peer sr-only" type="radio" name="tour-equipment" value="extended" data-summary-target="tour-summary-equipment-value" data-summary-value="Розширений комплект"><span id="tour-equipment-choice-extended" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Розширений комплект</span></label>
+                <label id="tour-equipment-label-none" class="cursor-pointer"><input id="tour-equipment-none" class="peer sr-only" type="radio" name="tour-equipment" value="none" data-summary-target="tour-summary-equipment-value" data-summary-value="Без спорядження" checked><span id="tour-equipment-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без спорядження</span></label>
+                <label id="tour-equipment-label-basic" class="cursor-pointer"><input id="tour-equipment-basic" class="peer sr-only" type="radio" name="tour-equipment" value="basic" data-summary-target="tour-summary-equipment-value" data-summary-value="Базовий комплект"><span id="tour-equipment-choice-basic" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Базовий комплект</span></label>
+                <label id="tour-equipment-label-extended" class="cursor-pointer"><input id="tour-equipment-extended" class="peer sr-only" type="radio" name="tour-equipment" value="extended" data-summary-target="tour-summary-equipment-value" data-summary-value="Розширений комплект"><span id="tour-equipment-choice-extended" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Розширений комплект</span></label>
               </div>
               <p id="tour-equipment-error" class="mt-2 hidden text-sm font-medium text-red-700" role="alert"></p>
             </fieldset>
@@ -394,9 +418,9 @@
             <fieldset id="tour-transfer-group" aria-describedby="tour-transfer-error" class="min-w-0 rounded border border-transparent p-2 transition aria-[invalid=true]:border-red-700 aria-[invalid=true]:bg-red-50">
               <legend id="tour-transfer-legend" class="mb-2 text-[0.9rem] font-semibold">4. Трансфер</legend>
               <div id="tour-transfer-options" class="grid grid-cols-1 gap-2 rounded-md py-2 transition focus-within:ring-2 focus-within:ring-[#43634E] focus-within:ring-offset-2 sm:grid-cols-3">
-                <label id="tour-transfer-label-none" for="tour-transfer-none" class="cursor-pointer"><input id="tour-transfer-none" class="peer sr-only" type="radio" name="tour-transfer" value="none" data-summary-target="tour-summary-transfer-value" data-summary-value="Без трансферу" checked><span id="tour-transfer-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без трансферу</span></label>
-                <label id="tour-transfer-label-one-way" for="tour-transfer-one-way" class="cursor-pointer"><input id="tour-transfer-one-way" class="peer sr-only" type="radio" name="tour-transfer" value="one-way" data-summary-target="tour-summary-transfer-value" data-summary-value="В один бік"><span id="tour-transfer-choice-one-way" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">В один бік</span></label>
-                <label id="tour-transfer-label-round-trip" for="tour-transfer-round-trip" class="cursor-pointer"><input id="tour-transfer-round-trip" class="peer sr-only" type="radio" name="tour-transfer" value="round-trip" data-summary-target="tour-summary-transfer-value" data-summary-value="В обидва боки"><span id="tour-transfer-choice-round-trip" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">В обидва боки</span></label>
+                <label id="tour-transfer-label-none" class="cursor-pointer"><input id="tour-transfer-none" class="peer sr-only" type="radio" name="tour-transfer" value="none" data-summary-target="tour-summary-transfer-value" data-summary-value="Без трансферу" checked><span id="tour-transfer-choice-none" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">Без трансферу</span></label>
+                <label id="tour-transfer-label-one-way" class="cursor-pointer"><input id="tour-transfer-one-way" class="peer sr-only" type="radio" name="tour-transfer" value="one-way" data-summary-target="tour-summary-transfer-value" data-summary-value="В один бік"><span id="tour-transfer-choice-one-way" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">В один бік</span></label>
+                <label id="tour-transfer-label-round-trip" class="cursor-pointer"><input id="tour-transfer-round-trip" class="peer sr-only" type="radio" name="tour-transfer" value="round-trip" data-summary-target="tour-summary-transfer-value" data-summary-value="В обидва боки"><span id="tour-transfer-choice-round-trip" class="flex min-h-12 items-center justify-center rounded border border-[#D4D9D1] bg-white px-3 text-sm font-medium transition peer-checked:border-[#43634E] peer-checked:bg-[#43634E] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#43634E]">В обидва боки</span></label>
               </div>
               <p id="tour-transfer-error" class="mt-2 hidden text-sm font-medium text-red-700" role="alert"></p>
             </fieldset>
@@ -422,7 +446,7 @@
               <a id="tour-summary-edit" href="#tour-builder-title" class="inline-flex min-h-11 items-center justify-center rounded font-semibold text-[#43634E] underline underline-offset-4 transition hover:text-[#304A39] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43634E]">Змінити параметри</a>
             </div>
           </aside>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -526,14 +550,16 @@
           </a>
           <p class="mt-4 max-w-xs text-[0.9rem] leading-[1.65] text-[#D8DED5]">Подорожуй глибше. Залишай менше сліду.</p>
         </div>
-        <address class="not-italic">
+        <div>
           <h2 class="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[#D8DED5]">Зв'яжіться з нами</h2>
-          <ul class="space-y-[0.625rem] text-[0.9rem] text-[#D8DED5]">
-            <li><a href="tel:+380671234567" class="rounded transition duration-[160ms] ease-[ease] hover:text-white hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">+38 (067) 123-45-67</a></li>
-            <li><a href="mailto:hello@do-vershyn.com.ua" class="rounded transition duration-[160ms] ease-[ease] hover:text-white hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">hello@do-vershyn.com.ua</a></li>
-            <li class="flex gap-3 pt-1"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="rounded underline decoration-white/30 underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="rounded underline decoration-white/30 underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Facebook</a></li>
-          </ul>
-        </address>
+          <address class="not-italic">
+            <ul class="space-y-[0.625rem] text-[0.9rem] text-[#D8DED5]">
+              <li><a href="tel:+380671234567" class="rounded transition duration-[160ms] ease-[ease] hover:text-white hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">+38&nbsp;(067)&nbsp;123&#8209;45&#8209;67</a></li>
+              <li><a href="mailto:hello@do-vershyn.com.ua" class="rounded transition duration-[160ms] ease-[ease] hover:text-white hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">hello@do-vershyn.com.ua</a></li>
+              <li class="flex gap-3 pt-1"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="rounded underline decoration-white/30 underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Instagram</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="rounded underline decoration-white/30 underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Facebook</a></li>
+            </ul>
+          </address>
+        </div>
         <div id="privacy">
           <h2 class="mb-3 text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-[#D8DED5]">Корисне</h2>
           <a href="mailto:hello@do-vershyn.com.ua?subject=Політика%20конфіденційності" class="rounded text-[0.9rem] text-[#D8DED5] underline decoration-white/30 underline-offset-4 transition duration-[160ms] ease-[ease] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Політика конфіденційності</a>
@@ -575,32 +601,7 @@
   </script>
   <script src="assets/js/validation.js" defer></script>
   <script src="assets/js/widget.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              50: "#f0f7f0",
-              100: "#dcebdc",
-              500: "#2f6b3e",
-              600: "#265631",
-              700: "#1d4226",
-              900: "#0f2613",
-            },
-            sand: {
-              100: "#f5efe1",
-              200: "#ece0c4",
-            },
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <script src="assets/js/deferred-embeds.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js" defer></script>

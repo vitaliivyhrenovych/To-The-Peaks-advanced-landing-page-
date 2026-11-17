@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Build Tailwind CSS
+        run: npx --yes tailwindcss@3.4.17 --input css/tailwind.input.css --output css/tailwind.generated.css --minify
+
       - name: Validate HTML and JavaScript
         run: |
           npx --yes html-validate@10 index.html

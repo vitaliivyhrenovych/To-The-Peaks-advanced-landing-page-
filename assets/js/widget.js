@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const form = document.getElementById('tour-builder-form');
+  const widget = document.getElementById('tour-builder-form');
   const totalOutput =
     document.getElementById('total-price') ||
     document.getElementById('tour-summary-total-value');
@@ -86,7 +86,7 @@
       return control;
     }
 
-    const scope = form || document;
+    const scope = widget || document;
     return scope.querySelector(
       `input[name="${choice.name}"]:checked, select[name="${choice.name}"]`
     );
@@ -232,7 +232,7 @@
     totalOutput.textContent = formatPrice(total);
   }
 
-  const eventTarget = form || document;
+  const eventTarget = widget || document;
   eventTarget.addEventListener('change', updatePrice);
   updatePrice();
 })();
