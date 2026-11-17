@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css">
+  <link rel="stylesheet" href="css/tailwind.generated.css">
 </head>
 <body class="bg-[#F7F5EF] font-['Inter',system-ui,sans-serif] text-[#202A24] antialiased leading-[1.65]">
   <a class="skip-link" href="#top">Перейти до основного вмісту</a>
@@ -96,14 +97,31 @@
         <h2 id="video-title">Відчуйте Карпати до мандрівки</h2>
         <div class="video-layout">
           <figure class="video-frame">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/i_floFq4Ekk?rel=0"
-              title="Відео про Карпати від «До Вершин»"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <a
+              class="video-placeholder"
+              href="https://www.youtube.com/watch?v=i_floFq4Ekk"
+              data-embed-src="https://www.youtube-nocookie.com/embed/i_floFq4Ekk?rel=0"
+              data-embed-title="Відео про Карпати від «До Вершин»"
+              data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              data-embed-referrerpolicy="strict-origin-when-cross-origin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Відтворити відео про Карпати від «До Вершин»"
+            >
+              <img
+                src="https://i.ytimg.com/vi/i_floFq4Ekk/hqdefault.jpg"
+                alt=""
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="video-placeholder__play" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </span>
+            </a>
           </figure>
           <aside class="hero-weather-card" aria-label="Поточна погода в Карпатах">
             <a class="weatherwidget-io" href="https://forecast7.com/en/48d0524d21/rakhiv/" data-label_1="РАХІВ" data-label_2="ПОГОДА" data-theme="pure" data-language="uk" data-unit="c">Погода в Рахові</a>
@@ -236,13 +254,19 @@
       <div class="map-container">
         <h2 id="map-title">Знайдіть свої Карпати</h2>
         <figure class="map-frame">
-          <iframe
-            src="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine&output=embed"
-            title="Інтерактивна карта Карпат, Україна"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
+          <a
+            class="map-placeholder"
+            href="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine"
+            data-embed-src="https://www.google.com/maps?q=Carpathian+Mountains,+Ukraine&amp;output=embed"
+            data-embed-title="Інтерактивна карта Карпат, Україна"
+            data-embed-referrerpolicy="no-referrer-when-downgrade"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Завантажити інтерактивну карту Карпат"
+          >
+            <span>Інтерактивна карта Карпат</span>
+            <span class="map-placeholder__action">Натисніть, щоб завантажити</span>
+          </a>
         </figure>
       </div>
     </section>
@@ -577,32 +601,7 @@
   </script>
   <script src="assets/js/validation.js" defer></script>
   <script src="assets/js/widget.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: {
-              50: "#f0f7f0",
-              100: "#dcebdc",
-              500: "#2f6b3e",
-              600: "#265631",
-              700: "#1d4226",
-              900: "#0f2613",
-            },
-            sand: {
-              100: "#f5efe1",
-              200: "#ece0c4",
-            },
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <script src="assets/js/deferred-embeds.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js" defer></script>
