@@ -75,7 +75,15 @@ function initializeFeedbackValidation() {
   continueButton.textContent = "Перейти до пошти";
   continueButton.addEventListener("click", () => {
     successDialog.close();
-    HTMLFormElement.prototype.submit.call(form);
+
+    const body = [...new FormData(form).entries()]
+      .map(([name, value]) => `${name}: ${value}`)
+      .join("\r\n");
+    const subject = encodeURIComponent("Заявка на тур — «До Вершин»");
+
+    window.location.href =
+      `mailto:hello@do-vershyn.com.ua?subject=${subject}` +
+      `&body=${encodeURIComponent(body)}`;
   });
 
   const closeButton = document.createElement("button");
